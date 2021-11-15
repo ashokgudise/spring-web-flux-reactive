@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link data-th-href="@{/grid/source/styles/smart.default.css}" rel="stylesheet">
+
+    <script type="text/javascript" th-src="@{/grid/source/modules/smart.table.js}"></script>
+    <script type="text/javascript" th-src="@{/grid/source/modules/smart.tabs.js}"></script>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div id="title">
+            <h1>Customers Info</h1>
+        </div>
+        <table id="allCustomers" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact Name</th>
+                <th>Customer Id</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Postal Code</th>
+                <th>Country</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="result" data-th-each="customer : ${customers}">
+                <td>[[${customer.customerName}]]</td>
+                <td>[[${customer.contactName}]]</td>
+                <td>[[${customer.cutomerId}]]</td>
+                <td>[[${customer.age}]]</td>
+                <td>[[${customer.sex}]]</td>
+                <td>[[${customer.address}]]</td>
+                <td>[[${customer.city}]]</td>
+                <td>[[${customer.postalCode}]]</td>
+                <td>[[${customer.country}]]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
